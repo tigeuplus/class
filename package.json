@@ -1,0 +1,29 @@
+{
+    "name": "@tigeuplus/class",
+    "version": "v1.0.0",
+    "description": "Tigeu Network 프로젝트 Class 모듈",
+    "main": "dist/index.js",
+    "private": false,
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": "./dist/index.js",
+        "./*": "./dist/*/index.js"
+    },
+    "scripts": {
+        "build": "tsc"
+    },
+    "author": "cobeol <cobeol0111@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "@tigeuplus/utility": "^1.0.0",
+        "elliptic": "^6.5.4",
+        "hex-to-binary": "^1.0.1"
+    },
+    "devDependencies": {
+        "@types/elliptic": "^6.4.14",
+        "@types/node": "^18.7.18"
+    },
+    "keywords": [
+        "tigeu"
+    ]
+}
