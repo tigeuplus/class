@@ -150,7 +150,7 @@ function calculateTransactionHash(
  */
 transaction) {
     transaction.hash = '';
-    return new utility_1.Hash().sha256(new utility_1.Json().stringify(transaction));
+    return utility_1.Hash.sha256(utility_1.Json.stringify(transaction));
 }
 exports.calculateTransactionHash = calculateTransactionHash;
 /**

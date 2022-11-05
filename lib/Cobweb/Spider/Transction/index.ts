@@ -151,7 +151,7 @@ export function calculateTransactionHash(
     transaction: Transaction): string
 {
     transaction.hash = ''
-    return new Hash().sha256(new Json().stringify(transaction))
+    return Hash.sha256(Json.stringify(transaction))
 }
 
 /**

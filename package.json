@@ -1,6 +1,6 @@
 {
     "name": "@tigeuplus/class",
-    "version": "v1.0.0",
+    "version": "v1.0.1",
     "description": "Tigeu Network 프로젝트 Class 모듈",
     "main": "dist/index.js",
     "private": false,
@@ -15,7 +15,7 @@
     "author": "cobeol <cobeol0111@gmail.com>",
     "license": "MIT",
     "dependencies": {
-        "@tigeuplus/utility": "^1.0.0",
+        "@tigeuplus/utility": "^2.0.0",
         "elliptic": "^6.5.4",
         "hex-to-binary": "^1.0.1"
     },

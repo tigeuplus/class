@@ -95,7 +95,7 @@ export function calculateTransferSignature(
     try
     {
         transfer.signature = ''
-        return new Json().stringify(new ec('secp256k1').keyFromPrivate(privatekey).sign(new Json().stringify(transfer)))
+        return Json.stringify(new ec('secp256k1').keyFromPrivate(privatekey).sign(Json.stringify(transfer)))
     }
     catch (error: any) {}
 }
@@ -144,7 +144,7 @@ export function isTransferSignatureValid(
     let signature: string = String(transfer.signature)
     transfer.signature = ''
 
-    return new ec('secp256k1').keyFromPublic(transfer.from, 'hex').verify(new Json().stringify(transfer), signature)
+    return new ec('secp256k1').keyFromPublic(transfer.from, 'hex').verify(Json.stringify(transfer), signature)
 }
 
 /**

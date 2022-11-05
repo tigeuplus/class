@@ -92,7 +92,7 @@ transfer,
 privatekey) {
     try {
         transfer.signature = '';
-        return new utility_1.Json().stringify(new elliptic_1.ec('secp256k1').keyFromPrivate(privatekey).sign(new utility_1.Json().stringify(transfer)));
+        return utility_1.Json.stringify(new elliptic_1.ec('secp256k1').keyFromPrivate(privatekey).sign(utility_1.Json.stringify(transfer)));
     }
     catch (error) { }
 }
@@ -136,7 +136,7 @@ function isTransferSignatureValid(
 transfer) {
     let signature = String(transfer.signature);
     transfer.signature = '';
-    return new elliptic_1.ec('secp256k1').keyFromPublic(transfer.from, 'hex').verify(new utility_1.Json().stringify(transfer), signature);
+    return new elliptic_1.ec('secp256k1').keyFromPublic(transfer.from, 'hex').verify(utility_1.Json.stringify(transfer), signature);
 }
 exports.isTransferSignatureValid = isTransferSignatureValid;
 /**
